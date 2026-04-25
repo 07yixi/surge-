@@ -27,7 +27,7 @@ jobs:
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
 
                    # Twitter/X + WhatsApp
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list > wx.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list | grep -iv "whatsapp\|wa\.me"> wx.list
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> wx.list
           echo "DOMAIN,probe.twitter.com" >> wx.list
           echo "DOMAIN,api.twitter.com" >> wx.list
