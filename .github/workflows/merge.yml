@@ -22,24 +22,21 @@ jobs:
           echo "DOMAIN-SUFFIX,x.ai" >> ai.list
           echo "DOMAIN-SUFFIX,grok.com" >> ai.list
 
-                   # Facebook + Instagram
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list > meta.list
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
-
-                   # Twitter/X + WhatsApp
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list | grep -iv "whatsapp\|wa\.me"> wx.list
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> wx.list
-          echo "DOMAIN,probe.twitter.com" >> wx.list
-          echo "DOMAIN,api.twitter.com" >> wx.list
-          echo "DOMAIN,t.co" >> wx.list
-          echo "DOMAIN,api-stream.twitter.com" >> wx.list
-
+                     # 社交媒体合集（Facebook + Instagram + Twitter/X + WhatsApp）
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list > social.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> social.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list >> social.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> social.list
+          echo "DOMAIN,probe.twitter.com" >> social.list
+          echo "DOMAIN,api.twitter.com" >> social.list
+          echo "DOMAIN,t.co" >> social.list
+          echo "DOMAIN,api-stream.twitter.com" >> social.list
 
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add ai.list meta.list wx.list
+          git add ai.list social.list
           git commit -m "Update rules" || echo "No changes"
           git push
           
