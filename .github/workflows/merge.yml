@@ -23,12 +23,12 @@ jobs:
           echo "DOMAIN-SUFFIX,grok.com" >> ai.list
 
           # Facebook + Instagram 合集
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list > meta.list
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
+          curl -s https://yfamilys.com/rule/Facebook.list > meta.list
+          curl -s https://yfamilys.com/rule/Instagram.list >> meta.list
 
           # Twitter/X + WhatsApp 合集
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list > wx.list
-          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> wx.list
+          curl -s https://yfamilys.com/rule/Twitter.list > xw.list
+          curl -s https://yfamilys.com/rule/Whatsapp.list >> xw.list
 
       - name: Commit and push
         run: |
