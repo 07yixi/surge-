@@ -36,11 +36,15 @@ jobs:
           echo "DOMAIN,t.co" >> social.list
           echo "DOMAIN,api-stream.twitter.com" >> social.list
 
+          # 国内应用直连合集
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list > cn.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list >> cn.list
+
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add ai.list social.list
+          git add ai.list social.list cn.list
           git commit -m "Update rules" || echo "No changes"
           git push
           
