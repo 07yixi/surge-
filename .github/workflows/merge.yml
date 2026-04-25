@@ -19,6 +19,7 @@ jobs:
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list > ai.list
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list >> ai.list
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list >> ai.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Copilot/Copilot.list >> ai.list
           echo "DOMAIN-SUFFIX,x.ai" >> ai.list
           echo "DOMAIN-SUFFIX,grok.com" >> ai.list
           echo "DOMAIN-SUFFIX,perplexity.ai" >> ai.list
