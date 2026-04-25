@@ -27,8 +27,8 @@ jobs:
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
 
           # Twitter/X + WhatsApp 合集
-          curl -s https://whatshub.top/rule/Twitter.list > wx.list
-          curl -s https://whatshub.top/rule/Whatsapp.list >> wx.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list
 
       - name: Commit and push
         run: |
