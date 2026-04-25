@@ -26,9 +26,13 @@ jobs:
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list > meta.list
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
 
-          # Twitter/X + WhatsApp
+                   # Twitter/X + WhatsApp
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list > wx.list
           curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> wx.list
+          echo "DOMAIN,probe.twitter.com" >> wx.list
+          echo "DOMAIN,api.twitter.com" >> wx.list
+          echo "DOMAIN,t.co" >> wx.list
+          echo "DOMAIN,api-stream.twitter.com" >> wx.list
 
 
       - name: Commit and push
