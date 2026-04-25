@@ -22,19 +22,20 @@ jobs:
           echo "DOMAIN-SUFFIX,x.ai" >> ai.list
           echo "DOMAIN-SUFFIX,grok.com" >> ai.list
 
-          # Facebook + Instagram 合集
-          curl -s https://yfamilys.com/rule/Facebook.list > meta.list
-          curl -s https://yfamilys.com/rule/Instagram.list >> meta.list
+                   # Facebook + Instagram
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list > meta.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list >> meta.list
 
-          # Twitter/X + WhatsApp 合集
-          curl -s https://yfamilys.com/rule/Twitter.list > xw.list
-          curl -s https://yfamilys.com/rule/Whatsapp.list >> xw.list
+          # Twitter/X + WhatsApp
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list > wx.list
+          curl -s https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list >> wx.list
+
 
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add ai.list meta.list xw.list
+          git add ai.list meta.list wx.list
           git commit -m "Update rules" || echo "No changes"
           git push
           
