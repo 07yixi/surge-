@@ -76,3 +76,6 @@ DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN,api.perplexity.ai
+DOMAIN-SUFFIX,pplx-api.perplexity.ai
